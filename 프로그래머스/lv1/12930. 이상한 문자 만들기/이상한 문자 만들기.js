@@ -1,20 +1,5 @@
 function solution(s) {
-    let result = "";
-    let arr=s.split(" ");
-    for(let i=0; i<arr.length; i++){
-        for(let j=0; j<arr[i].length; j++){
-            if(j%2 ===0 ){
-                result+=arr[i][j].toUpperCase();
-                
-            } else{
-                result+=arr[i][j].toLowerCase();
-            }
-        }
-        if(i<arr.length-1){
-            result += " ";
-        }
-    }
-    return result;
+    return s.split(" ").map((a)=>a.split("").map((b,i) =>i % 2 === 0 ? b.toUpperCase():b.toLowerCase()).join("")).join(" ");
 }
 /*
 1. 문자열 짝수번째 알파벳은 대문자, 홀수번째 알파벳은 소문자로 변경한다.
