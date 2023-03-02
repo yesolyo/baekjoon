@@ -24,3 +24,10 @@ function solution(n, arr1, arr2) {
     return answer;
 
 }
+
+/* 다른 사람 풀이
+const solution = (n,arr1,arr2) => arr1.map((a,i)=>(a|arr2[i]).toString(2).padStart(n,0).replace(/0/g," ").replace(/1/g,"#"))
+
+새롭게 알게 된 사실
+- padStart의 기능과 비트 연산자 or(|) 사용
+*/
