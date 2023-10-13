@@ -1,9 +1,12 @@
 let fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let result = fs.readFileSync(filePath).toString().split("\n").map(Number);
-const set = new Set();
+const arr = [];
 for (let i = 0; i < 10; i++) {
-  set.add(result[i] % 42);
+  const a = result[i] % 42;
+  arr.push(a);
 }
+
+const set = new Set(arr);
 
 console.log(set.size);
